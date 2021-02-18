@@ -12,6 +12,7 @@
 #include <fstream>
 #include <vector>
 #include <span>
+#include <tuple>
 
 #include <cppitertools/range.hpp>
 #include <cppitertools/enumerate.hpp>
