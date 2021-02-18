@@ -27,16 +27,28 @@ using namespace iter;
 
 void runEmployeeExample() {
 	Employee marcel1 = Employee("Marcel",50000);
-	Employee marcel2("Marcel", 50000);
-	Employee marcel3{"Marcel", 50000};
-	//Employee marcel4 = Employee(); // Erreur si ctor par défaut pas défini
-	//Employee marcel5; // Erreur si ctor par défaut pas défini
+	Employee marcel2("Marce2", 50000);
+	Employee marcel3{"Marce3"};
+	Employee marcel4 = Employee(); // Erreur si ctor par défaut pas défini
+	Employee marcel5 = {}; // Erreur si ctor par défaut pas défini
+	Employee* marcel6 = new Employee("Marcel6", 69);
+	marcel5.setSalary(1'000'000.00);
+	delete marcel6;
+
+	cout << marcel1.getName() << " " << marcel1.getSalary() << "\n"
+		 << marcel2.getName() << " " << marcel2.getSalary() << "\n"
+		 << marcel3.getName() << " " << marcel3.getSalary() << "\n"
+		 << marcel4.getName() << " " << marcel4.getSalary() << "\n"
+		 << marcel5.getName() << " " << marcel5.getSalary() << "\n";
+	
 	cout << "- - - - - - - - - - -" << "\n";
 }
 
 void runCompanyExample() {
 	Company stonks("Stonks LLC", "chosson");
 	stonks.getPresident().setSalary(69'420);
+	const Company stonks2("Stonks Jr LLC", "chosson jr");
+	stonks2.getPresident().getName();
 	stonks.addEmployee("Foo", 69);
 	stonks.addEmployee("Bar", 42);
 	stonks.addEmployee("Qux", 9000);
