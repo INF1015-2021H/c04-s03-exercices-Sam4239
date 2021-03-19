@@ -76,9 +76,9 @@ void runTuplesExample() {
 
 
 int main() {
-	runEmployeeExample();
+	//runEmployeeExample();
 	cout << "\n\n";
-	runCompanyExample();
+	//runCompanyExample();
 	cout << "\n\n";
 	runTuplesExample();
 }
